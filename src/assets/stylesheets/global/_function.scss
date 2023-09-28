@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+@function letterSpacing($DesignLetterSpacing) {
+  @return math.div($DesignLetterSpacing, 1000) * 1em;
+}
+
+@function lineHeight($DesignLineHeight, $fontSize) {
+  @return math.div($DesignLineHeight, $fontSize);
+}
+
+@function calcVw($px, $parent) {
+  @return math.div($px, $parent) * 100vw;
+}
+
+@function calcMobileVw($px) {
+  @return math.div($px, 375) * 100vw;
+}

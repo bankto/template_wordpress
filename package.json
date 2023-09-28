@@ -1,0 +1,29 @@
+{
+  "name": "wordpress_webpack_template",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "webpack --node-env=development --watch",
+    "build": "webpack --node-env=production"
+  },
+  "devDependencies": {
+    "@barba/core": "^2.9.7",
+    "autoprefixer": "^10.4.16",
+    "browser-sync": "^2.29.3",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "path": "^0.12.7",
+    "postcss": "^8.4.30",
+    "postcss-loader": "^7.3.3",
+    "prettier": "^3.0.3",
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

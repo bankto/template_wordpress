@@ -1,0 +1,17 @@
+// カラー設定
+$defaultFontColor: #121212;
+$grayColor: #778899;
+$bgColor: #f7f7f7;
+
+// transition
+$defaultTransition: all .3s ease-out;
+
+// easing
+$power4Out: cubic-bezier(0.22, 1, 0.36, 1);
+
+//@media
+$mediaQueries: (
+  "medium": "screen and (min-width: "900px")",
+  "large": "screen and (min-width: "1025px")",
+  "wide": "screen and (min-width: "1921px")",
+);

@@ -1,0 +1,26 @@
+@use 'variable' as *;
+
+// ブレイクポイント設定
+@mixin mediaQueries($point) {
+  @media #{map-get($mediaQueries, $point)} {
+    @content;
+  }
+}
+
+@mixin is-medium {
+  @media #{map-get($mediaQueries, "medium")} {
+    @content;
+  }
+}
+
+@mixin is-large {
+  @media #{map-get($mediaQueries, "large")} {
+    @content;
+  }
+}
+
+@mixin is-wide {
+  @media #{map-get($mediaQueries, "wide")} {
+    @content;
+  }
+}

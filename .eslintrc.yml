@@ -1,0 +1,15 @@
+globals:
+  ga: false
+  gtag: false
+  barba: false
+env:
+  browser: true
+  node: true
+  es2021: true
+parserOptions:
+  sourceType: module
+  ecmaVersion: 12
+extends:
+  - eslint:recommended
+  - prettier
+rules:  {}
