@@ -21,7 +21,7 @@ const updateMeta = (next) => {
 
   if (typeof ga === 'function') ga('send', 'pageview', window.location.pathname)
   if (typeof gtag === 'function')
-    gtag('config', 'G-EME748N118', { page_path: window.location.pathname })
+    gtag('config', '******', { page_path: window.location.pathname })
 }
 
 /**
