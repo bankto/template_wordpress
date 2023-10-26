@@ -1,6 +1,8 @@
 import barba from '@barba/core'
 
 // meta系の更新
+const ANALYTICS_TRACKING_ID = '******';
+
 const updateMeta = (next) => {
   const { head } = document
   const targetHead = next.html.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0]
@@ -9,7 +11,6 @@ const updateMeta = (next) => {
   const removeHeadTags = [
     "meta[name='description']",
     "meta[property='og:title']",
-    "meta[property='og:site_name']",
     "meta[property='og:description']",
     "meta[property='og:url']",
     "meta[property='og:image']",
@@ -21,7 +22,7 @@ const updateMeta = (next) => {
 
   if (typeof ga === 'function') ga('send', 'pageview', window.location.pathname)
   if (typeof gtag === 'function')
-    gtag('config', '******', { page_path: window.location.pathname })
+    gtag('config', ANALYTICS_TRACKING_ID, { page_path: window.location.pathname })
 }
 
 /**
