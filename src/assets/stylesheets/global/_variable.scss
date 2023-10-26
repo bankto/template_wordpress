@@ -1,47 +1,78 @@
 // カラー設定
-$defaultFontColor: #121212;
+$color-primary: #E3EF5E;
+$color-black: #000;
+$color-white: #FFF;
+
+$color-text-default: $color-black;
+$color-back: #FFFDF6;
+
+// フォント設定
+$font-xLarge: 2rem;
+$font-large: 1.8rem;
+$font-medium: 1.6rem;
+$font-small: 1.4rem;
+$font-xSmall: 1.2rem;
+$font-minimum: 1rem;
+$font-default: $font-medium;
+
+$font-family-ja: "YuGothic", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+// letter-spacing
+$letterSpacing-wide: .15em;
+
+// line-height
+$lineHeight-oneLine: 1;
+$lineHeight-small: 1.4;
+$lineHeight-medium: 1.6;
+$lineHeight-large: 1.8;
+$lineHeight-xLarge: 2;
+$lineHeight-default: $lineHeight-medium;
 
 // transition
-$defaultTransition: all .3s ease-out;
+$transition-default: all .3s ease-out;
 
 // easing
-$linear: cubic-bezier(0.0, 0.0, 1.0, 1.0);
+$easing-linear: cubic-bezier(0.0, 0.0, 1.0, 1.0);
 // Sine（最も弱い）
-$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
-$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
-$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$easing-easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easing-easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easing-easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 // Quad（弱め。Sineより強く、Cubicより弱い）
-$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$easing-easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 // Cubic（Quadより強く、Quartより弱い）
-$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
-$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$easing-easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easing-easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easing-easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
 // Quart（Cubicより強く、Quintより弱い）
-$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
-$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
-$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+$easing-easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easing-easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easing-easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
 // Quint（Quartより強く、Expoより弱い）
-$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
-$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+$easing-easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easing-easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easing-easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
 // Expo（最も強い）
-$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
-$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
-$easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+$easing-easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easing-easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easing-easeInOutExpo: cubic-bezier(1, 0, 0, 1);
 // Circ（Expoのような強さを持つが、加速や減速の時間がよりゆるやか）
-$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
-$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$easing-easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easing-easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easing-easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 // Back（少し行き過ぎてから戻ってくるような動き）
-$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$easing-easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$easing-easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easing-easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-//@media
-$mediaQueries: (
-  "medium": "screen and (min-width: "900px")",
-  "large": "screen and (min-width: "1025px")",
-  "wide": "screen and (min-width: "1921px")",
-);
+// media Queries
+// 基本のブレイクポイント方向を設定
+// up  : モバイルファースト
+// down: デスクトップファースト
+$breakpoint-default-direction: up;
+
+// ブレイクポイントの値入力 (コメントアウトは閲覧の参考)
+$breakpoint-xsmall: 600px; // スマートフォン
+$breakpoint-small: 760px; // タブレット縦持ち(Portrait)
+$breakpoint-medium: 1024px; // タブレット横持ち(Landscape)
+$breakpoint-large: 1200px; // デスクトップ(コンテンツの最大値など)
+$breakpoint-xlarge: 1600px; // ワイドディスプレイ(アートボードのサイズなど)

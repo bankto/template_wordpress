@@ -1,0 +1,76 @@
+@use "variable" as v;
+@use "sass:map";
+
+$mediaQueries: (
+  // Extra small
+  "xsmall-down": "screen and (width < "v.$breakpoint-xsmall")",
+  "xsmall-up": "screen and (width >= "v.$breakpoint-xsmall")",
+  "xsmall-only": "screen and (width < "v.$breakpoint-xsmall")",
+  // Small
+  "small-down": "screen and (width < "v.$breakpoint-small")",
+  "small-up": "screen and (width >= "v.$breakpoint-small")",
+  "small-only": "screen and ("v.$breakpoint-xsmall" <= width < "v.$breakpoint-small")",
+  // Medium
+  "medium-down": "screen and (width < "v.$breakpoint-medium")",
+  "medium-up": "screen and (width >= "v.$breakpoint-medium")",
+  "medium-only": "screen and ("v.$breakpoint-small" <= width < "v.$breakpoint-medium")",
+  // Large
+  "large-down": "screen and (width < "v.$breakpoint-large")",
+  "large-up": "screen and (width >= "v.$breakpoint-large")",
+  "large-only": "screen and ("v.$breakpoint-medium" <= width < "v.$breakpoint-large")",
+  // Extra large
+  "xlarge-down": "screen and (width < "v.$breakpoint-xlarge")",
+  "xlarge-up": "screen and (width >= "v.$breakpoint-xlarge")",
+  "xlarge-only": "screen and (width >= "v.$breakpoint-large")",
+  // Print
+  "print": "print"
+) !default;
+
+// Mixin
+@mixin is-xsmall($dir: v.$breakpoint-default-direction) {
+  @if $dir == 'down' and v.$breakpoint-xsmall == 0{
+    @error '$breakpoint-xsmall の値を0より大きくしてください。';
+  }
+  @media #{map.get($mediaQueries, "xsmall-" + $dir)} {
+    @content;
+  }
+}
+
+@mixin is-small($dir: v.$breakpoint-default-direction) {
+  @media #{map.get($mediaQueries, "small-" + $dir)} {
+    @content;
+  }
+}
+
+@mixin is-medium($dir: v.$breakpoint-default-direction) {
+  @media #{map.get($mediaQueries, "medium-" + $dir)} {
+    @content;
+  }
+}
+
+@mixin is-large($dir: v.$breakpoint-default-direction) {
+  @media #{map.get($mediaQueries, "large-" + $dir)} {
+    @content;
+  }
+}
+
+@mixin is-xlarge($dir: v.$breakpoint-default-direction) {
+  @if $dir == "down" and v.$breakpoint-xlarge == 0 {
+    @error "$breakpoint-xlarge の値を0より大きくしてください。";
+  }
+  @media #{map.get($mediaQueries, "xlarge-" + $dir)} {
+    @content;
+  }
+}
+
+@mixin mediaQuery($range) {
+  @media screen and (#{$range}) {
+    @content;
+  }
+}
+
+@mixin is-print($media: print) {
+  @media #{map.get($mediaQueries, $media)} {
+    @content;
+  }
+}

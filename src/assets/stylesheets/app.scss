@@ -1,4 +1,17 @@
-@use 'foundation';
-@use 'utility';
-@use 'layout';
-@use 'page';
+// foundation
+@use "foundation";
+
+// global
+@use "global";
+
+// layout
+@use "layout";
+
+// component
+@use "component";
+
+// page
+@use "page";
+
+// utility
+@use "utility";
