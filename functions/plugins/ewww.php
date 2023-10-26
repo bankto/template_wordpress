@@ -1,0 +1,2 @@
+<?php
+  define( 'EWWW_IMAGE_OPTIMIZER_DISABLE_AUTOCONVERT', true );
