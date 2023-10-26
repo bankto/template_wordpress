@@ -34,7 +34,7 @@ const config = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/assets/images'),
-          to: 'images/[name][ext]',
+          to: 'images/[path][name][ext]',
           noErrorOnMissing: true,
           globOptions: {
             ignore: ['**/assets/images/sprite/**.svg']
